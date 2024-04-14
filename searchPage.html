@@ -14,13 +14,19 @@
         <h4><a href="./index.html">Back to home page</a></h4>
     </nav>
 
-    <h1 style="text-align: center; background-color: #97d9f3;; padding: 5rem;"> Which one is your favourite?</h1>
-    <div class="search-form" style="align-items: center;">
-        <input id="input" type="search" placeholder="Type here...">
-        <button onclick="getBooks()" id="myButton">Search</button>
+    <h1 style="text-align: center; background-color: #97d9f3;; padding: 3rem;"> Which one is your favourite?</h1>
+    <div class="header-search">
+        <a href="./index.html" class="logo"> 
+        <img src="./pictures/logo.jpg" width="150" height="150" alt="logo picture"/>
+        <h4 style="text-align: center; color:black">BOOKSTORM</h4></a>
+       
+        <div class="search-form" style="align-items: center;">
+            <input id="input" type="search" placeholder="Type here...">
+            <button onclick="getBooks()" id="myButton">Search</button>
+        </div>
     </div>
     <br>
-    <div id="output"></div>
+    <div class="output" id="output"></div>
 
 
     
@@ -31,7 +37,7 @@ function getBooks(){
     .then(a=> a.json())
     .then(response =>{
         for(var i=0; i<10; i++){
-            document.getElementById("output").innerHTML+="<h2>"+response.docs[i].title+"</h2>"+response.docs[i].author_name[0]+"<br><img src='http://covers.openlibrary.org/b/isbn/"+response.docs[i].isbn[0]+"-M.jpg'><br>"
+            document.getElementById("output").innerHTML+="<h2>"+response.docs[i].title+"</h2>"+response.docs[i].author_name[0]+"<img src='http://covers.openlibrary.org/b/isbn/"+response.docs[i].isbn[0]+"-M.jpg'>"
         }
     });
 }
@@ -48,8 +54,17 @@ document.getElementById('input').addEventListener('keydown', function(getBooks) 
 </script>
 
 <style>
+
+.header-search{
+    background: #fff;
+    padding:1.5rem 9%;
+    display: flex;
+    align-items: center;
+    font-size: 2.5rem;
+    font-weight: bolder;
+    color:#444;
+}
 .search-form{
-    padding-left: 10rem;
     width: 50rem;
     height: 5rem;
     border:.1rem solid rgba(0,0,0,.1);
@@ -61,18 +76,29 @@ document.getElementById('input').addEventListener('keydown', function(getBooks) 
 }
 .search-form input{
     font-size: 1.6rem;
-    padding: 0 1.2rem;
     height: 100%;
     width: 100%;
     text-transform: none;
     color: #444;
 }
 .search-form button{
-    font-size: 2.5rem;
+    font-size: 2rem;
     background-color: grey;
     border-radius: 1rem;
     color:#444;
     cursor: pointer;
+}
+.search-form button:hover{
+    color:#97d9f3;
+}
+
+.output{
+    display:flex;
+    padding: 3rem;
+    background-image: url(./pictures/background2.jpg);
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
 }
 
 </style>

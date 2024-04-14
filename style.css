@@ -434,7 +434,7 @@ body{
     flex: 1 1 1rem;  
 }
 .deal .image img{
-    width: 100%; 
+    width: 60%; 
 }
 .deal .content h3{
     color:var(--blue);
@@ -618,6 +618,7 @@ body{
         margin:0;
         max-width: 100%;
     }
+    
 }
 @media (max-width:450px){
     html{
