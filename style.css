@@ -81,6 +81,20 @@ section{
 .btn:hover{
     background: var(--dark-color);
 }
+.btn2{
+    margin-top: 1rem;
+    display:inline-block;
+    padding:.9rem 3rem;
+    border-radius:  .5rem;
+    color: #fff;
+    background: var(--blue);
+    font-size: 1.7rem;
+    cursor: pointer;
+    font-weight: 500;
+}
+.btn2:hover{
+    background: var(--dark-color);
+}
 
 .header .header-1{
     background: #fff;
@@ -100,6 +114,7 @@ section{
     color:var(--black);
     cursor: pointer;
 }
+
 .header .header-1 .icons a{
     color:var(--black);
 }
@@ -224,6 +239,85 @@ body{
     color: var(--black);
     cursor: pointer;
 }
+.wishlist {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255,255,255,9);
+    position: fixed;
+    top:0; right:-105%;
+    z-index: 10000;
+    height: 100%;
+    width: 100%;
+}
+.wishlist.active{
+    right:0;
+}
+.wishlist h1{
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    color:var(--black);
+    text-align: center;
+}
+.wishlist p{
+    padding-top: .8rem;
+    color:var(--light-color);
+    font-size: 1.5rem;
+}
+.wishlist #close-wishlist-btn{
+    position:absolute;
+    top:1.5rem; right:2.5rem;
+    font-size: 3rem;
+    color: var(--black);
+    cursor: pointer;
+}
+.wishlist li{
+    color:black;
+    display: flex;
+    text-align: center;
+    font-size: 3rem;
+    flex-direction: column;
+}
+
+.cartItems {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255,255,255,9);
+    position: fixed;
+    top:0; right:-105%;
+    z-index: 10000;
+    height: 100%;
+    width: 100%;
+}
+.cartItems.active{
+    right:0;
+}
+.cartItems h1{
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    color:var(--black);
+    text-align: center;
+}
+.cartItems p{
+    padding-top: .8rem;
+    color:var(--light-color);
+    font-size: 1.5rem;
+}
+.cartItems #close-cart-btn{
+    position:absolute;
+    top:1.5rem; right:2.5rem;
+    font-size: 3rem;
+    color: var(--black);
+    cursor: pointer;
+}
+.cartItems li{
+    color: black;
+    display: flex;
+    text-align: center;
+    font-size: 3rem;
+    flex-direction: column;
+}
 
 .home{
     background:url(../pictures/background2.jpg);
@@ -319,7 +413,17 @@ body{
     font-size: 2.2rem;
     margin:1.5rem;
 }
-.featured .featured-slider .box .icons a:hover{
+.featured .featured-slider .box:hover .icons button{
+    color:var(--black);
+    font-size: 2.2rem;
+    margin:1.5rem;
+}
+.featured .featured-slider .box .icons .btn{
+    color:var(--black);
+    font-size: 5rem;
+    margin:1.5rem;
+}
+.featured .featured-slider .box .icons btn:hover{
     background: var(--blue);
     color:#fff;
 }

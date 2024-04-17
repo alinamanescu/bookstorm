@@ -18,8 +18,8 @@
 
         <div class="icons">
             <a href="./searchPage.html" class="bi bi-search"></a>
-            <a href="#" onclick="alert('No favorites here!')" class="bi bi-heart-fill"> </a>
-            <a href="#" onclick="alert('Your cart is empty!')" class="bi bi-cart-fill"> </a>
+            <div id="wishlist-btn" class="bi bi-heart-fill"> </div>
+            <div id="cart-btn" class="bi bi-cart-fill"></div>
             <div id="login-btn" class="bi bi-people-fill"> </div>
         </div>
     </div>
@@ -61,11 +61,32 @@
             <input type="checkbox" name="" id="remember-me">
             <label for="remember-me"> remember me </label>
         </div>
-        <input type="submit" value="sign in" class="btn">
+        <input type="submit" value="sign in" class="btn2">
         <p>forget password ? <a href="#">click here </a></p>
         <p>don't have an account? <a href="#"> create one </a> </p>
     </form>
 </div>
+
+<!-- wishlist -->
+
+<div class="wishlist">
+    <div id="close-wishlist-btn" class="bi bi-x-square-fill"></div>
+        <h1 style="text-align: center; background-color: #97d9f3;; padding: 3rem;">Wishlist</h1>
+        <ul id="wishlistItems"></ul>
+
+    </div>
+</div>
+
+
+<!-- cart section -->
+
+<div class="cartItems">
+    <div id="close-cart-btn" class="bi bi-x-square-fill"></div>
+        <h1 style="text-align: center; background-color: #97d9f3;; padding: 3rem;">Cart</h1>
+        <ul id="cartItems"></ul>
+    </div>
+</div>
+
 
 <!-- home sections -->
 
@@ -79,7 +100,7 @@
                 veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo 
                 consequat.
             </p>
-            <a href="#" class="btn">shop now</a>
+            <a href="#" class="btn2">shop now</a>
         </div>
         <div class="swiper books-slider">
             <div class="swiper-wrapper">
@@ -140,85 +161,85 @@
             <div class="swiper-slide box">
                 <div class="icons">
                     <a href="./searchPage.html" class="bi bi-search"></a>
-                    <a href="#" onclick="alert('Added to favorites')" class="bi bi-heart-fill"></a>
+                    <button onclick="addToWishlist('The Cursed Child')" class="bi bi-heart-fill"></button>
                 </div>
                 <div class="image">
                     <img src="./pictures/book-1.jpg" alt="" />
                 </div>
                 <div class="content">
-                    <h3>featured books</h3>
+                    <h3>The Cursed Child</h3>
                     <div class="price">15.99$ <span>20.99$</span> </div>
-                    <a href="#" onclick="alert('Added to cart')" class="btn">add to cart</a>
+                    <button onclick="addToCart('The Cursed Child')" class="btn">add to cart</button>
                 </div>
             </div>
             <div class="swiper-slide box">
                 <div class="icons">
                     <a href="./searchPage.html" class="bi bi-search"></a>
-                    <a href="#" onclick="alert('Added to favorites')" class="bi bi-heart-fill"></a>
+                    <button onclick="addToWishlist('The Little Prince')" class="bi bi-heart-fill"></button>
                 </div>
                 <div class="image">
                     <img src="./pictures/book-2.jpg" alt="" />
                 </div>
                 <div class="content">
-                    <h3>featured books</h3>
+                    <h3>The Little Prince</h3>
                     <div class="price">15.99$ <span>20.99$</span> </div>
-                    <a href="#" onclick="alert('Added to cart')" class="btn">add to cart</a>
+                    <button onclick="addToCart('The Little Prince')" class="btn">add to cart</button>
                 </div>
             </div>
             <div class="swiper-slide box">
                 <div class="icons">
                     <a href="./searchPage.html" class="bi bi-search"></a>
-                    <a href="#" onclick="alert('Added to favorites')" class="bi bi-heart-fill"></a>
+                    <button onclick="addToWishlist('The midnight library')" class="bi bi-heart-fill"></button>
                 </div>
                 <div class="image">
                     <img src="./pictures/book-3.jpg" alt="" />
                 </div>
                 <div class="content">
-                    <h3>featured books</h3>
+                    <h3>The midnight library</h3>
                     <div class="price">15.99$ <span>20.99$</span> </div>
-                    <a href="#" onclick="alert('Added to cart')" class="btn">add to cart</a>
+                    <button onclick="addToCart('The midnight library')" class="btn">add to cart</button>
                 </div>
             </div>
             <div class="swiper-slide box">
                 <div class="icons">
                     <a href="./searchPage.html" class="bi bi-search"></a>
-                    <a href="#" onclick="alert('Added to favorites')" class="bi bi-heart-fill"></a>
+                    <button onclick="addToWishlist('The silent patient')" class="bi bi-heart-fill"></button>
                 </div>
                 <div class="image">
                     <img src="./pictures/book-4.jpg" alt="" />
                 </div>
                 <div class="content">
-                    <h3>featured books</h3>
+                    <h3>The silent patient</h3>
                     <div class="price">15.99$ <span>20.99$</span> </div>
-                    <a href="#" onclick="alert('Added to cart')" class="btn">add to cart</a>
+                    <button onclick="addToCart('The silent patient')" class="btn">add to cart</button>
                 </div>
             </div>
             <div class="swiper-slide box">
                 <div class="icons">
                     <a href="./searchPage.html" class="bi bi-search"></a>
-                    <a href="#" onclick="alert('Added to favorites')" class="bi bi-heart-fill"></a>
+                    <button onclick="addToWishlist('A storm of swords')" class="bi bi-heart-fill"></button>
                 </div>
                 <div class="image">
                     <img src="./pictures/book-5.jpg" alt="" />
                 </div>
                 <div class="content">
-                    <h3>featured books</h3>
+                    <h3>A storm of swords</h3>
                     <div class="price">15.99$ <span>20.99$</span> </div>
-                    <a href="#" onclick="alert('Added to cart')" class="btn">add to cart</a>
+                    <button onclick="addToCart('A storm of swords')" class="btn">add to cart</button>
                 </div>
             </div>
             <div class="swiper-slide box">
                 <div class="icons">
                     <a href="./searchPage.html" class="bi bi-search"></a>
-                    <a href="#" onclick="alert('Added to favorites')" class="bi bi-heart-fill"></a>
+                    <button onclick="addToWishlist('Daisy Jones & The Six')" class="bi bi-heart-fill"></button>
                 </div>
                 <div class="image">
                     <img src="./pictures/book-6.jpg" alt="" />
                 </div>
                 <div class="content">
-                    <h3>featured books</h3>
+                    <h3>Daisy Jones & The Six</h3>
                     <div class="price">15.99$ <span>20.99$</span> </div>
-                    <a href="#" onclick="alert('Added to cart')" class="btn">add to cart</a>
+                    <button onclick="addToCart('Daisy Jones & The Six')" class="btn">add to cart</button>
                 </div>
             </div>
         </div>
@@ -237,7 +258,7 @@
     <form action="">
         <h3>subscribe for latest updates</h3>
         <input type="email" name="" placeholder="enter your email" id="" class="box">
-        <input type="submit" value="subscribe" class="btn">
+        <input type="submit" value="subscribe" class="btn2">
     </form>
 </section>
 <!--newsletter section ends-->
@@ -363,7 +384,7 @@
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do 
             eiusmod tempor incididunt ut labore et dolore magna aliqua. 
         </p>
-        <a href="#" class="btn">shop now</a>
+        <a href="#" class="btn2">shop now</a>
     </div>
 
     <div class="image">
@@ -484,7 +505,7 @@
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
                         sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
                     </p>
-                    <a href="#" class="btn">read more</a>
+                    <a href="#" class="btn2">read more</a>
                 </div>
             </div>
 
@@ -497,7 +518,7 @@
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
                         sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
                     </p>
-                    <a href="#" class="btn">read more</a>
+                    <a href="#" class="btn2">read more</a>
                 </div>
             </div>
 
@@ -510,7 +531,7 @@
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
                         sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
                     </p>
-                    <a href="#" class="btn">read more</a>
+                    <a href="#" class="btn2">read more</a>
                 </div>
             </div>
 
@@ -523,7 +544,7 @@
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
                         sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
                     </p>
-                    <a href="#" class="btn">read more</a>
+                    <a href="#" class="btn2">read more</a>
                 </div>
             </div>
 
@@ -536,7 +557,7 @@
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
                         sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
                     </p>
-                    <a href="#" class="btn">read more</a>
+                    <a href="#" class="btn2">read more</a>
                 </div>
             </div>
         </div>
