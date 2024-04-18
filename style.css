@@ -241,6 +241,7 @@ body{
 }
 .wishlist {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     background: rgba(255,255,255,9);
@@ -253,17 +254,6 @@ body{
 .wishlist.active{
     right:0;
 }
-.wishlist h1{
-    font-size: 2.5rem;
-    text-transform: uppercase;
-    color:var(--black);
-    text-align: center;
-}
-.wishlist p{
-    padding-top: .8rem;
-    color:var(--light-color);
-    font-size: 1.5rem;
-}
 .wishlist #close-wishlist-btn{
     position:absolute;
     top:1.5rem; right:2.5rem;
@@ -271,16 +261,19 @@ body{
     color: var(--black);
     cursor: pointer;
 }
-.wishlist li{
+.wishlist ul{
     color:black;
+    background-image: url(./pictures/background2.jpg);
     display: flex;
     text-align: center;
+    padding: 10rem;
     font-size: 3rem;
     flex-direction: column;
 }
 
 .cartItems {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     background: rgba(255,255,255,9);
@@ -293,17 +286,6 @@ body{
 .cartItems.active{
     right:0;
 }
-.cartItems h1{
-    font-size: 2.5rem;
-    text-transform: uppercase;
-    color:var(--black);
-    text-align: center;
-}
-.cartItems p{
-    padding-top: .8rem;
-    color:var(--light-color);
-    font-size: 1.5rem;
-}
 .cartItems #close-cart-btn{
     position:absolute;
     top:1.5rem; right:2.5rem;
@@ -311,12 +293,37 @@ body{
     color: var(--black);
     cursor: pointer;
 }
-.cartItems li{
+.cartItems ul{
     color: black;
+    background-image: url(./pictures/background2.jpg);
     display: flex;
     text-align: center;
+    padding: 10rem;
     font-size: 3rem;
     flex-direction: column;
+}
+.cartItems .cart-button{
+    padding: 5px 10px;
+    margin-right: 5px;
+    background-color: #151d16;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.cartItems .cart-button:hover{
+    background-color:var(--blue);
+}
+.cartItems .remove-button{
+    padding: 5px 10px;
+    background-color: #d5635b;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.cartItems .remove-button:hover{
+    background-color: #da190b;
 }
 
 .home{
@@ -413,16 +420,25 @@ body{
     font-size: 2.2rem;
     margin:1.5rem;
 }
+.featured .featured-slider .box .icons a:hover{
+    background: var(--blue);
+}
 .featured .featured-slider .box:hover .icons button{
     color:var(--black);
     font-size: 2.2rem;
     margin:1.5rem;
 }
-.featured .featured-slider .box .icons .btn{
+.featured .featured-slider .box .icons button{
     color:var(--black);
+    background: white;
     font-size: 5rem;
     margin:1.5rem;
+    cursor: pointer;
 }
+.featured .featured-slider .box .icons button:hover{
+    background: var(--blue);
+}
+
 .featured .featured-slider .box .icons btn:hover{
     background: var(--blue);
     color:#fff;
